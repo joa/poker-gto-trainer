@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTO Trainer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">♠</span>
+      <div>
+        <h1>GTO Trainer</h1>
+        <p class="tagline">Grundlagen für No-Limit Hold'em</p>
+      </div>
+    </div>
+    <label class="players">
+      <span>Spieler am Tisch</span>
+      <select id="players">
+        <option value="2">2 (Heads-up)</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6" selected>6 (6-max)</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9 (Full Ring)</option>
+      </select>
+    </label>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="learn" class="active">Lernen</button>
+    <button role="tab" data-tab="examples">Beispiele</button>
+    <button role="tab" data-tab="ranges">Ranges</button>
+    <button role="tab" data-tab="quiz">Training &amp; Quiz</button>
+    <button role="tab" data-tab="glossary">Glossar</button>
+    <button role="tab" data-tab="stats">Fortschritt</button>
+  </nav>
+
+  <main>
+    <section id="tab-learn" class="tab-panel active"></section>
+    <section id="tab-examples" class="tab-panel"></section>
+    <section id="tab-ranges" class="tab-panel"></section>
+    <section id="tab-quiz" class="tab-panel"></section>
+    <section id="tab-glossary" class="tab-panel"></section>
+    <section id="tab-stats" class="tab-panel"></section>
+  </main>
+
+  <footer class="foot">
+    Die Charts sind vereinfachte Annäherungen an Solver-Strategien für Cash Games mit 100bb ohne Antes.
+    Sie zeigen die Form guter Strategie, sind aber keine exakten Solver-Ergebnisse.
+  </footer>
+
+  <script src="ranges.js"></script>
+  <script src="postflop.js"></script>
+  <script src="content.js"></script>
+  <script src="examples.js"></script>
+  <script src="glossary.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
